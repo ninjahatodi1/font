@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Provides Font Awesome link to include in html file">
+    <meta name="keywords"  content="font awesome link,GetAwesomeLink,getlink,fontawesome">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">        
+  
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker|ZCOOL+KuaiLe&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Da&display=swap" rel="stylesheet">    
+    <title>GetAwesomeLink</title>
+    <link rel="icon" href="title.png" />
+</head> 
+<body>
+
+      <div class="container">
+        <div class="container-content">        
+            <p  id="link"> &lt;link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous"&gt;
+             </p> 
+
+        <h1> Hello World </h1>             
+        <button  onclick="copyToClipboard('#link')">Get the link  <i class="far fa-clipboard"></i></button>
+      </div>
+    </div>    
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script>
+
+        function copyToClipboard(element) {
+            var $temp = $("<input>");
+            $("body").append($temp);
+            $temp.val($(element).text()).select();
+            document.execCommand("copy");
+            $temp.remove();
+          }        
+        </script>
+</html>
