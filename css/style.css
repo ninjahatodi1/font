@@ -1,0 +1,94 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    line-height: 1.1;
+    font-family: 'Baloo Da', cursive;
+
+}
+
+.container1 {
+    position: relative;
+    background: #333 url(../img/background.png) no-repeat center center/cover;
+    height: 100vh;
+    margin: auto;
+}
+
+.container1 .container-content {
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+
+    /* overlay */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(75, 114, 243, 0.001);
+}
+
+#link,
+#openModal {
+    visibility: hidden;
+}
+
+h1,
+h2 {
+    font-size: 7rem;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+
+button {
+    background: rgb(250, 177, 43);
+    color: white;
+    margin-top: 2rem;
+    border: 6px white dotted;
+    padding: 1rem 3rem;
+    border-radius: 10px;
+    font-size: 2rem;
+    transition: all 0.4s ease-in-out;
+    text-align: center;
+}
+
+
+button:hover {
+    transform: scale(1.1);
+    background: skyblue;
+    border: 4px dashed white;
+    cursor: pointer;
+    box-shadow: 0.6rem 0.6rem 0.6rem orange, -0.6rem -0.6rem 0.6rem orange;
+}
+
+h1,
+h2 {
+    transform: translateY(-1200px);
+    animation: heading 1s forwards ease-in;
+}
+
+h2 {
+    transform: translateX(1200px);
+    animation: modal 0.5s forwards ease-in;
+
+}
+
+
+@keyframes heading {
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes modal {
+    to {
+        transform: translateX(0);
+    }
+}
