@@ -45,6 +45,8 @@ h2 {
     color: white;
     text-align: center;
     font-weight: bold;
+    font-family: 'Varela Round', sans-serif;
+    margin: 0 1rem;
 }
 
 button {
